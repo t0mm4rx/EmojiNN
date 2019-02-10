@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>EmojiNN</title>
+  </head>
+  <body>
+
+    <div id="text">
+      <div class="title_emoji">
+        <h1>EmojiNN</h1><img src="emojis/heart.png" height="35" />
+      </div>
+      <h3>Train the nn with the canvas on the left, guess with the right one.</h3>
+      <p>
+        The machine learning part was built with tensorflow.js and the Layers API. The Graphics part was built using p5.js. At least 5 doodles are required to train the model. 10 are recommanded.<br />
+        The code is available <a href="https://github.com/t0mm4rx/EmojiNN" target="_blank">here</a>.
+      </p>
+    </div>
+
+    <div id="canvas_wrapper"></div>
+
+    <div class="row">
+      <button id="train" onclick="run_training()">Train the model</button>
+    </div>
+    <div class="row">
+      <p>
+        Training exemples:
+      </p>
+      <span id="training_exemples">0</span>
+    </div>
+    <div class="row">
+      <p>
+        Training progress:
+      </p>
+      <span id="progress">not started</span>
+      <span id="loss"></span>
+    </div>
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.2/dist/tf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+  <script src="gui.js"></script>
+  <script src="nn.js"></script>
+</html>
